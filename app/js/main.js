@@ -1,4 +1,5 @@
 const swiperTariff = new Swiper('.tariff__slider', {
+  speed: 500,
   slidesPerView: 1,
   loop: true,
   spaceBetween: 20,
@@ -9,9 +10,13 @@ const swiperTariff = new Swiper('.tariff__slider', {
   keyboard: {
     enabled: true,
   },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
 
-const swiperClients = new Swiper('.clients__slider', {
+const swiperClients = new Swiper('.clients__inner', {
   slidesPerView: 1,
   loop: true,
   spaceBetween: 20,
@@ -22,4 +27,12 @@ const swiperClients = new Swiper('.clients__slider', {
   keyboard: {
     enabled: true,
   },
+});
+
+$(function () {
+  $('.tariff__button').on('click', function (e) {
+    e.preventDefault();
+    $('.tariff__button').removeClass('tariff__button--active');
+    $(this).addClass('tariff__button--active');
+  });
 });

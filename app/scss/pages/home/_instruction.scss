@@ -3,10 +3,12 @@
 .instruction {
   margin-bottom: 150px;
 
+  @media(max-width: $r-l) {
+    margin-bottom: 80px;
+  }
+
   &__title {
-    span {
-      display: block;
-    }
+    margin-top: 0;
   }
 
   &__inner {
@@ -14,16 +16,55 @@
     justify-content: space-between;
   }
 
-  &__list {
+  &__steps {
     flex: 0 1 calc(510 / 1200 * 100%);
+
+    @media(max-width: $r-sm) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 0;
+    counter-reset: number;
+
+    @media(max-width: $r-sm) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     margin-bottom: 30px;
-  }
+    counter-increment: number;
 
-  &__num {
-    color: $grey;
+    @media(max-width: $r-sm) {
+      flex: 0 1 50%;
+    }
+
+    @media(max-width: $r-xsm) {
+      flex: 0 1 100%;
+    }
+
+    &:nth-child(even) {
+      @media(max-width: $r-sm) {
+        padding-left: 40px;
+      }
+
+      @media(max-width: $r-xsm) {
+        padding-left: 0;
+      }
+    }
+
+    &::before {
+      content: '0'counter(number);
+      color: $grey;
+    }
+
+    &:nth-child(n + 10)::before {
+      content: counter(number);
+    }
   }
 
   &__subtitle {
@@ -35,6 +76,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media(max-width: $r-sm) {
+      display: none;
+    }
   }
 }
 

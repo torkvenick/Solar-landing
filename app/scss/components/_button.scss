@@ -7,6 +7,10 @@
   transition: all 0.3s ease 0s;
   outline: transparent;
 
+  @media(max-width: $r-sm) {
+    font-size: 20px;
+  }
+
   &:focus svg {
     transform: scale(0.9);
   }

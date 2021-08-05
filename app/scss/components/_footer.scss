@@ -1,23 +1,167 @@
-/* Start Footer */
+/* Start contacts */
 
 .footer {
-  position: absolute;
-  bottom: 50px;
-  width: 100%;
+  min-height: 610px;
+  padding: 70px 0 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   &__inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    color: #fff;
+
+    @media(max-width: $r-sm) {
+      flex-wrap: wrap;
+    }
   }
 
+  &__form {
+    flex: 0 1 calc(510 / 1200 * 100%);
+
+    @media(max-width: $r-sm) {
+      flex: 0 1 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title {
+    color: #fff;
+  }
+
+  &__submit {
+    margin-top: 60px;
+    border: transparent;
+    background-color: transparent;
+    color: #fff;
+    outline: transparent;
+
+    &:focus span,
+    &:active span {
+      text-shadow: none;
+      color: #fff;
+    }
+
+    svg path {
+      stroke: #fff;
+
+      &:last-child {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__address {
+    font-style: normal;
+    flex: 0 1 50%;
+
+    @media(max-width: $r-sm) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    font-size: 18px;
+
+    @media(max-width: $r-xsm) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__text {
+    span {
+      display: block;
+
+      @media(max-width: $r-sm) {
+        display: initial;
+      }
+    }
+  }
+
+  &__tel {
+    display: block;
+    transition: letter-spacing 0.3s ease 0s;
+
+    @media(max-width: $r-sm) {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      letter-spacing: 0.6px;
+    }
+  }
+ 
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media(max-width: $r-sm) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  &__logo {
+    @media(max-width: $r-sm) {
+      margin: 0 auto 30px 0;
+    } 
+  }
+
+  &__social {
+    margin-bottom: 30px;
+  }
+  
   &__policy {
     color: #fff;
     transition: transform 0.3s ease 0s;
-    
+
+    @media(max-width: $r-sm) {
+      order: 1;
+      align-self: flex-end;
+    }
+  
     &:hover {
       transform: translateY(5px);
     }
   }
 }
 
-/* End Footer */
+.form {
+  &__input {
+    width: 100%;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    display: block;
+    border: transparent;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+    outline: transparent;
+
+    @media(max-width: $r-sm) {
+      font-size: 18px;
+    }
+
+    &:focus {
+      border-bottom-style: dotted;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &:hover {
+      border-bottom-color: $olive;
+    }
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+}
+
+/* End contacts */

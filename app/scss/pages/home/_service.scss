@@ -3,6 +3,10 @@
 .service {
   margin-bottom: 150px;
 
+  @media(max-width: $r-l) {
+    margin-bottom: 100px;
+  }
+
   &__inner {
     display: flex;
     color: $black;
@@ -11,10 +15,35 @@
   &__items {
     padding-right: 90px;
     flex: 0 1 50%;
+
+    @media(max-width: $r-sm) {
+      padding-right: 0;
+      flex-basis: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     margin-bottom: 50px;
+
+    @media(max-width: $r-sm) {
+      flex: 0 1 50%;
+    }
+
+    @media(max-width: $r-xsm) {
+      flex: 0 1 100%;
+    }
+
+    &:nth-child(even) {
+      @media(max-width: $r-sm) {
+        padding-left: 40px;
+      }
+
+      @media(max-width: $r-xsm) {
+        padding-left: 0;
+      }
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -27,6 +56,10 @@
 
   &__img {
     flex: 0 1 50%;
+
+    @media(max-width: $r-sm) {
+      display: none;
+    }
 
     img {
       width: 100%;

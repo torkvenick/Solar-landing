@@ -3,60 +3,92 @@
 .clients {
   margin-bottom: 150px;
 
-  &__inner {
-    display: flex;
-    justify-content: space-between;
+  @media(max-width: $r-l) {
+    margin-bottom: 100px;
   }
 
-  &__slider {
-    margin: 0;
-    flex: 0 1 calc(510 / 1200 * 100%);
-  }
-  
   &__wrapper {
-    display: flex;
     padding-bottom: 40px;
   }
-  
+
   &__slide {
-    height: 370px;
-    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media(max-width: $r-md) {
+      flex-direction: column;
+    }
   }
 
   &__img {
+    height: 370px;
+    max-width: 510px;
+    margin-right: 40px;
     object-fit: cover;
-    height: 100%;
+    object-position: center;
+    @media(max-width: $r-md) {
+      max-width: 100%;
+      margin: 0 0 20px;
+    }
   }
 
   &__arrow {
 
     &--prev {
-      left: 50%;
-      transform: translateX(50%);
+      left: 25%;
+      @media(max-width: $r-md) {
+        left: auto;
+        right: 20%;
+      }
     }
 
     &--next {
       transform: rotate(180deg);
-      left: 70%;
+      left: 30%;
       bottom: -2px;
+
+      @media(max-width: $r-md) {
+        left: auto;
+        right: 5%;
+      }
     }
   }
 
   &__description {
-   flex: 0 1 50%; 
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media(max-width: $r-md) {
+      flex: 1 1 100%;
+    }
   }
 
   &__subtitle {
     margin: 5px 0 30px;
-    font-size: 18px;
-    font-weight: 700;
+    @media(max-width: $r-md) {
+      flex: 1 1 100%;
+      font-size: 22px;
+    }
+  }
+
+  &__text {
+    @media(max-width: $r-md) {
+      font-size: 18px;
+    }
   }
 
   &__list {
     margin: 0 0 auto 50px;
+
+    @media(max-width: $r-l) {
+      margin-left: 0;
+    }
+
+    @media(max-width: $r-md) {
+      margin-bottom: 60px;
+    }
   }
 
   &__item {
@@ -64,7 +96,7 @@
   }
 
   &__link {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 
     &:hover {
       svg path:last-child {

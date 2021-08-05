@@ -1,0 +1,168 @@
+/* Start tariff */
+
+.tariff {
+  margin-bottom: 150px;
+
+  &__inner {
+    display: flex;
+    margin-bottom: 150px;
+  }
+
+  &__info {
+    padding-right: 90px;
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tabs {
+    margin-bottom: 110px;
+  }
+
+  &__button {
+    padding: 0;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 18px;
+    outline: transparent;
+    border: transparent;
+    background-color: transparent;
+    transition: all 0.3s ease 0s;
+
+    &+& {
+      margin-left: 40px;
+    }
+
+    &:focus {
+      &::before {
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+        left: 0;
+        right: auto;
+      }
+    }
+
+    &:active {
+      color: $olive;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 100%;
+      border-radius: 4px 4px 0 0;
+      background-color: $olive;
+      opacity: 0.4;
+      transition: width 0.5s ease 0s;
+    }
+
+    &::after {
+      height: 1px;
+      width: 0;
+      content: '';
+      position: absolute;
+      background-color: $olive;
+      left: auto;
+      bottom: -4px;
+      right: 0;
+      transition: all 0.5s ease 0s;
+    }
+  }
+
+  &__slider {
+    max-width: 510px;
+    height: 210px;
+    margin-bottom: 100px;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 5;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__slide {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__slide-img {
+    object-fit: cover;
+    max-width: calc(235 / 510 * 100%);
+  }
+
+  &__slide-text {
+    flex: 0 1 calc(235 / 510 * 100%);
+    position: relative;
+  }
+
+  &__arrow {
+
+    &--prev {
+      right: 35%;
+    }
+
+    &--next {
+      transform: rotate(180deg);
+      right: 25%;
+      bottom: -2px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 0 1 calc(235 / 510 * 100%);
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin: 0 0 5px;
+  }
+
+  &__describe {
+    flex: 0 1 50%;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__about {
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__banner {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__quote {
+    max-width: 680px;
+    text-align: center;
+    font-size: 42px;
+    color: #fff;
+  }
+}
+
+/* End tariff */

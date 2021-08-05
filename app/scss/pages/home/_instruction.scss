@@ -1,0 +1,41 @@
+/* Start Instruction */
+
+.instruction {
+  margin-bottom: 150px;
+
+  &__title {
+    span {
+      display: block;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    flex: 0 1 calc(510 / 1200 * 100%);
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__num {
+    color: $grey;
+  }
+
+  &__subtitle {
+    margin: 10px 0 2px;
+  }
+
+  &__img {
+    flex: 0 1 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* End Instruction */

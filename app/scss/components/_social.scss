@@ -1,0 +1,20 @@
+/* Start Social */
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &__item {
+    margin: 0 10px;
+    transition: all 0.3s ease 0s;
+    
+    &:hover svg {
+      stroke: $olive;
+    }
+
+    &:active {
+      transform: translateY(-5px);
+    }
+  }
+}
+/* End Social */

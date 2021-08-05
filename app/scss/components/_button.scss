@@ -1,0 +1,47 @@
+/* Start Button */
+.button {
+  font-size: 18px;
+  display: inline-block;
+  padding-left: 50px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  outline: transparent;
+
+  &:focus svg {
+    transform: scale(0.9);
+  }
+
+  &:hover {
+    svg path {
+      fill: $olive;
+    }
+
+    svg path:last-child {
+      transform: translateY(-20px) translateX(20px) rotate(25deg);
+      fill: #fff;
+      stroke: #fff;
+    }
+  }
+
+  &:active {
+    color: $black;
+    text-shadow: 0px 0px 5px #fff;
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    stroke: #fff;
+    bottom: -15px;
+    transition: all 0.3s;
+  }
+
+  svg path {
+    transition: all 0.3s ease 0s;
+  }
+
+  span {
+    position: relative;
+  }
+}
+/* End Button */

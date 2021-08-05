@@ -1,0 +1,23 @@
+/* Start Footer */
+
+.footer {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__policy {
+    color: #fff;
+    transition: transform 0.3s ease 0s;
+    
+    &:hover {
+      transform: translateY(5px);
+    }
+  }
+}
+
+/* End Footer */

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<!-- проверил переменную для title - вроде работает. Этого достаточно или нужно ещё что-то куда-то прописывать? -->
+@@include('../parts/main-components/_head.html', {
+  "title":"Solar EXE"
+})
+
+<body>
+  <!-- Оболочка -->
+  <div class="wrapper">
+    <div class="content">
+      @@include('../parts/main-components/_header.html')
+      <main class="main">
+        @@include('../parts/page-home/_service.html')
+        @@include('../parts/page-home/_tariff.html')
+        @@include('../parts/page-home/_clients.html')
+        @@include('../parts/page-home/_instruction.html')
+        @@include('../parts/page-home/_contacts.html')
+      </main>
+    </div>
+    @@include('../parts/main-components/_footer.html')
+  </div>
+  @@include('../parts/main-components/_footer-scripts.html')
+</body>
+
+</html> 

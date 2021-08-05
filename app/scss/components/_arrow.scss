@@ -1,0 +1,32 @@
+/* Start arrow */
+
+.arrow {
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  border: transparent;
+  background-color: transparent;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  outline: transparent;
+  z-index: 10;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-radius: 4px 4px 0 0;
+    background-color: $olive;
+    opacity: 0.4;
+    transition: width 0.5s ease 0s;
+  }
+
+  &:focus {
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+/* End arrow */

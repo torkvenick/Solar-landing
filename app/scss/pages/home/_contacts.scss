@@ -1,0 +1,100 @@
+/* Start contacts */
+
+.contacts {
+  min-height: 730px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__inner {
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+  }
+
+  &__form {
+    flex: 0 1 calc(510 / 1200 * 100%);
+  }
+
+  &__title {
+    color: #fff;
+  }
+  
+  &__submit {
+    margin-top: 60px;
+    border: transparent;
+    background-color: transparent;
+    color: #fff;
+    outline: transparent;
+    &:focus span,
+    &:active span {
+      text-shadow: none;
+      color: #fff;
+    }
+ 
+    svg path{
+      stroke: #fff;
+
+      &:last-child {
+        fill: #fff;
+      }
+    }
+  }
+  
+  &__address {
+    font-style: normal;
+    flex: 0 1 50%;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  &__text {
+    span {
+      display: block;
+    }
+  }
+
+  &__tel {
+    display: block;
+    transition: letter-spacing 0.3s ease 0s;
+
+    &:hover {
+      letter-spacing: 0.6px;
+    }
+  }
+}
+
+.form {
+  &__input {
+    width: 100%;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    border: transparent;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+    outline: transparent;
+
+    &:focus {
+      border-bottom-style: dotted;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &:hover {
+      border-bottom-color: $olive;
+    }
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+}
+
+/* End contacts */

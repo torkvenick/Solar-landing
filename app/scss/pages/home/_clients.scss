@@ -40,12 +40,12 @@
     object-position: center;
 
     @media(max-width: $r-md) {
+      height: 210px;
       max-width: 100%;
       margin: 0 0 20px;
     }
 
     @media(max-width: $r-xxsm) {
-      height: 210px;
       margin-top: 10px;
     }
   }

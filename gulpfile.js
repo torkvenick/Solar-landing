@@ -29,7 +29,7 @@ gulp.task('sass', function () {
   return gulp.src('app/scss/**/*.scss')
 
     //Действия над файлом (здесь сжатие и переименование) 
-    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(rename({ suffix: '.min' }))
 
     //труба autoprefixer

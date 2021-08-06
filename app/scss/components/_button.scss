@@ -11,6 +11,10 @@
     font-size: 20px;
   }
 
+  @media(max-width: $r-xxsm) {
+    font-size: 14px;
+  }
+
   &:focus svg {
     transform: scale(0.9);
   }
@@ -38,6 +42,13 @@
     stroke: #fff;
     bottom: -15px;
     transition: all 0.3s;
+
+    @media(max-width: $r-xxsm) {
+      width: 60px;
+      height: 60px;
+      left: 10px;
+      bottom: -10px;
+    }
   }
 
   svg path {
@@ -48,4 +59,5 @@
     position: relative;
   }
 }
+
 /* End Button */

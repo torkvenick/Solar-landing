@@ -7,6 +7,14 @@
     margin-bottom: 100px;
   }
 
+  @media(max-width: $r-xxsm) {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
   &__wrapper {
     padding-bottom: 40px;
   }
@@ -18,6 +26,10 @@
     @media(max-width: $r-md) {
       flex-direction: column;
     }
+
+    @media(max-width: $r-xxsm) {
+      padding-top: 15px;
+    }
   }
 
   &__img {
@@ -26,30 +38,47 @@
     margin-right: 40px;
     object-fit: cover;
     object-position: center;
+
     @media(max-width: $r-md) {
       max-width: 100%;
       margin: 0 0 20px;
     }
+
+    @media(max-width: $r-xxsm) {
+      height: 210px;
+      margin-top: 10px;
+    }
   }
 
   &__arrow {
-
     &--prev {
       left: 25%;
+
       @media(max-width: $r-md) {
         left: auto;
         right: 20%;
       }
+
+      @media(max-width: $r-xxsm) {
+        top: -2px;
+        right: 30%;
+        bottom: auto;
+      }
     }
 
     &--next {
-      transform: rotate(180deg);
       left: 30%;
       bottom: -2px;
+      transform: rotate(180deg);
 
       @media(max-width: $r-md) {
         left: auto;
         right: 5%;
+      }
+
+      @media(max-width: $r-xxsm) {
+        top: 0;
+        bottom: auto;
       }
     }
   }
@@ -67,15 +96,20 @@
 
   &__subtitle {
     margin: 5px 0 30px;
+
     @media(max-width: $r-md) {
       flex: 1 1 100%;
       font-size: 22px;
+    }
+
+    @media(max-width: $r-xxsm) {
+      font-size: 18px;
     }
   }
 
   &__text {
     @media(max-width: $r-md) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 
@@ -97,14 +131,15 @@
 
   &__link {
     margin-bottom: 10px;
+  }
 
-    &:hover {
-      svg path:last-child {
-        fill: #303030;
-        stroke: #303030;
-      }
+  &:hover {
+    svg path:last-child {
+      fill: #303030;
+      stroke: #303030;
     }
   }
 }
+
 
 /* End Clients */

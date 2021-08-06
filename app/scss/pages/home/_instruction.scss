@@ -7,6 +7,10 @@
     margin-bottom: 80px;
   }
 
+  @media(max-width: $r-xxsm) {
+    margin-bottom: 50px;
+  }
+
   &__title {
     margin-top: 0;
   }
@@ -69,6 +73,12 @@
 
   &__subtitle {
     margin: 10px 0 2px;
+  }
+
+  &__text {
+    @media(max-width: $r-xxsm) {
+      line-height: 2;
+    }
   }
 
   &__img {

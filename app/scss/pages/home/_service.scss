@@ -54,6 +54,12 @@
     margin: 0 0 15px;
   }
 
+  &__text {
+    @media(max-width: $r-xxsm) {
+      line-height: 2;
+    }
+  }
+
   &__img {
     flex: 0 1 50%;
 

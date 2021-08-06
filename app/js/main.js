@@ -36,3 +36,13 @@ $(function () {
     $(this).addClass('tariff__button--active');
   });
 });
+
+const btnSocial = document.querySelector('.header__btn');
+const menuSocial = document.querySelector('.header__social');
+
+if (btnSocial) {
+  btnSocial.addEventListener("click", function (e) {
+    menuSocial.classList.toggle('header__social--active');
+    btnSocial.classList.toggle('header__btn--active');
+  })
+};
